@@ -2,7 +2,6 @@ package com.yscclinic.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yscclinic.dto.LoginRequest;
-import com.yscclinic.dto.SignupRequest;
 import com.yscclinic.dto.UserDto;
 import com.yscclinic.entity.Role;
 import com.yscclinic.entity.User;
