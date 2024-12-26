@@ -1,0 +1,15 @@
+com/yscclinic/dto/SignupRequestTest.class
+com/yscclinic/service/UserServiceTest.class
+com/yscclinic/controller/UserControllerTest.class
+com/yscclinic/controller/PatientControllerTest.class
+com/yscclinic/service/RoleServiceTest.class
+com/yscclinic/security/JwtAuthenticationFilterTest.class
+com/yscclinic/controller/AuthControllerTest.class
+com/yscclinic/config/SecurityConfigTest.class
+com/yscclinic/security/JwtTokenProviderTest.class
+com/yscclinic/service/PatientServiceTest.class
+com/yscclinic/controller/RoleControllerTest.class
+com/yscclinic/util/TestUtil.class
+com/yscclinic/exception/GlobalExceptionHandlerTest.class
+com/yscclinic/integration/PatientIntegrationTest.class
+com/yscclinic/integration/UserIntegrationTest.class

@@ -1,0 +1,61 @@
+-------------------------------------------------------------------------------
+Test set: com.yscclinic.service.PatientServiceTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.299 s <<< FAILURE! -- in com.yscclinic.service.PatientServiceTest
+com.yscclinic.service.PatientServiceTest.deletePatient_NotFound_ThrowsException -- Time elapsed: 0.010 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Hasta bulunamadı: 1
+	at com.yscclinic.service.impl.PatientServiceImpl.deletePatient(PatientServiceImpl.java:99)
+	at com.yscclinic.service.PatientServiceTest.lambda$deletePatient_NotFound_ThrowsException$3(PatientServiceTest.java:163)
+	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)
+	...(73 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.PatientServiceTest.deletePatient_NotFound_ThrowsException(PatientServiceTest.java:164)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.PatientServiceTest.searchPatients_Success -- Time elapsed: 0.004 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual not to be null
+	at com.yscclinic.service.PatientServiceTest.searchPatients_Success(PatientServiceTest.java:184)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.PatientServiceTest.getPatientByTcNo_NotFound_ThrowsException -- Time elapsed: 0.003 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Hasta bulunamadı: 12345678901
+	at com.yscclinic.service.impl.PatientServiceImpl.lambda$getPatientByTcNo$1(PatientServiceImpl.java:41)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.yscclinic.service.impl.PatientServiceImpl.getPatientByTcNo(PatientServiceImpl.java:41)
+	...(75 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.PatientServiceTest.getPatientByTcNo_NotFound_ThrowsException(PatientServiceTest.java:109)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.PatientServiceTest.getPatientById_NotFound_ThrowsException -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Hasta bulunamadı: 1
+	at com.yscclinic.service.impl.PatientServiceImpl.lambda$getPatientById$0(PatientServiceImpl.java:34)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.yscclinic.service.impl.PatientServiceImpl.getPatientById(PatientServiceImpl.java:34)
+	...(75 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.PatientServiceTest.getPatientById_NotFound_ThrowsException(PatientServiceTest.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

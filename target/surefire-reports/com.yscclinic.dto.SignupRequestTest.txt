@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------
+Test set: com.yscclinic.dto.SignupRequestTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.551 s <<< FAILURE! -- in com.yscclinic.dto.SignupRequestTest
+com.yscclinic.dto.SignupRequestTest.emptyUsername_HasViolation -- Time elapsed: 0.019 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 1 but was: 2 in:
+[ConstraintViolationImpl{interpolatedMessage='Kullanıcı adı boş olamaz', propertyPath=username, rootBeanClass=class com.yscclinic.dto.SignupRequest, messageTemplate='Kullanıcı adı boş olamaz'},
+    ConstraintViolationImpl{interpolatedMessage='Kullanıcı adı 3-50 karakter arasında olmalıdır', propertyPath=username, rootBeanClass=class com.yscclinic.dto.SignupRequest, messageTemplate='Kullanıcı adı 3-50 karakter arasında olmalıdır'}]
+	at com.yscclinic.dto.SignupRequestTest.emptyUsername_HasViolation(SignupRequestTest.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.dto.SignupRequestTest.emptyFullName_HasViolation -- Time elapsed: 0.010 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 1 but was: 2 in:
+[ConstraintViolationImpl{interpolatedMessage='Ad Soyad boş olamaz', propertyPath=fullName, rootBeanClass=class com.yscclinic.dto.SignupRequest, messageTemplate='Ad Soyad boş olamaz'},
+    ConstraintViolationImpl{interpolatedMessage='Ad Soyad 3-100 karakter arasında olmalıdır', propertyPath=fullName, rootBeanClass=class com.yscclinic.dto.SignupRequest, messageTemplate='Ad Soyad 3-100 karakter arasında olmalıdır'}]
+	at com.yscclinic.dto.SignupRequestTest.emptyFullName_HasViolation(SignupRequestTest.java:92)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.dto.SignupRequestTest.emptyPassword_HasViolation -- Time elapsed: 0.007 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 1 but was: 2 in:
+[ConstraintViolationImpl{interpolatedMessage='Şifre boş olamaz', propertyPath=password, rootBeanClass=class com.yscclinic.dto.SignupRequest, messageTemplate='Şifre boş olamaz'},
+    ConstraintViolationImpl{interpolatedMessage='Şifre en az 6 karakter olmalıdır', propertyPath=password, rootBeanClass=class com.yscclinic.dto.SignupRequest, messageTemplate='Şifre en az 6 karakter olmalıdır'}]
+	at com.yscclinic.dto.SignupRequestTest.emptyPassword_HasViolation(SignupRequestTest.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

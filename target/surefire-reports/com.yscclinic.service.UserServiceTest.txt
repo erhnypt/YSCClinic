@@ -1,0 +1,99 @@
+-------------------------------------------------------------------------------
+Test set: com.yscclinic.service.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 5, Errors: 3, Skipped: 0, Time elapsed: 0.200 s <<< FAILURE! -- in com.yscclinic.service.UserServiceTest
+com.yscclinic.service.UserServiceTest.createUser_DuplicateEmail -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting code to raise a throwable.
+	at com.yscclinic.service.UserServiceTest.createUser_DuplicateEmail(UserServiceTest.java:109)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.UserServiceTest.createUser_DuplicateUsername -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting code to raise a throwable.
+	at com.yscclinic.service.UserServiceTest.createUser_DuplicateUsername(UserServiceTest.java:93)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.UserServiceTest.createUser_Success -- Time elapsed: 0.004 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.yscclinic.service.UserServiceTest.createUser_Success(UserServiceTest.java:70)
+  2. -> at com.yscclinic.service.UserServiceTest.createUser_Success(UserServiceTest.java:71)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.UserServiceTest.addRoleToUser_Success -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.yscclinic.service.RoleService.getRoleByName(String)" because "this.roleService" is null
+	at com.yscclinic.service.impl.UserServiceImpl.addRoleToUser(UserServiceImpl.java:106)
+	at com.yscclinic.service.UserServiceTest.addRoleToUser_Success(UserServiceTest.java:212)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.UserServiceTest.getUserByUsername_NotFound_ThrowsException -- Time elapsed: 0.003 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Kullanıcı bulunamadı: testuser
+	at com.yscclinic.service.impl.UserServiceImpl.lambda$getUserByUsername$1(UserServiceImpl.java:49)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.yscclinic.service.impl.UserServiceImpl.getUserByUsername(UserServiceImpl.java:49)
+	...(75 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.UserServiceTest.getUserByUsername_NotFound_ThrowsException(UserServiceTest.java:149)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.UserServiceTest.removeRoleFromUser_Success -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.yscclinic.service.RoleService.getRoleByName(String)" because "this.roleService" is null
+	at com.yscclinic.service.impl.UserServiceImpl.removeRoleFromUser(UserServiceImpl.java:114)
+	at com.yscclinic.service.UserServiceTest.removeRoleFromUser_Success(UserServiceTest.java:222)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.UserServiceTest.getUserById_NotFound_ThrowsException -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Kullanıcı bulunamadı: 1
+	at com.yscclinic.service.impl.UserServiceImpl.lambda$getUserById$0(UserServiceImpl.java:42)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.yscclinic.service.impl.UserServiceImpl.getUserById(UserServiceImpl.java:42)
+	...(75 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.UserServiceTest.getUserById_NotFound_ThrowsException(UserServiceTest.java:130)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.UserServiceTest.deleteUser_NotFound_ThrowsException -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Kullanıcı bulunamadı: 1
+	at com.yscclinic.service.impl.UserServiceImpl.deleteUser(UserServiceImpl.java:86)
+	at com.yscclinic.service.UserServiceTest.lambda$deleteUser_NotFound_ThrowsException$4(UserServiceTest.java:200)
+	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)
+	...(73 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.UserServiceTest.deleteUser_NotFound_ThrowsException(UserServiceTest.java:201)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

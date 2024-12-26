@@ -1,0 +1,15 @@
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/controller/PatientControllerTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/service/RoleServiceTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/controller/AuthenticationControllerTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/service/PatientServiceTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/integration/UserIntegrationTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/controller/UserControllerTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/config/SecurityConfigTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/exception/GlobalExceptionHandlerTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/service/UserServiceTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/security/JwtTokenProviderTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/integration/PatientIntegrationTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/controller/RoleControllerTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/security/JwtAuthenticationFilterTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/dto/SignupRequestTest.java
+/Users/erhanyapti/YSCClinic/src/test/java/com/yscclinic/util/TestUtil.java

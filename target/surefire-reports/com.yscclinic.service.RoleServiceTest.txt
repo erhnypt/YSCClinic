@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.yscclinic.service.RoleServiceTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.034 s <<< FAILURE! -- in com.yscclinic.service.RoleServiceTest
+com.yscclinic.service.RoleServiceTest.getRoleByName_NotFound_ThrowsException -- Time elapsed: 0.004 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Rol bulunamadı: ROLE_TEST
+	at com.yscclinic.service.impl.RoleServiceImpl.lambda$getRoleByName$1(RoleServiceImpl.java:41)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.yscclinic.service.impl.RoleServiceImpl.getRoleByName(RoleServiceImpl.java:41)
+	...(75 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.RoleServiceTest.getRoleByName_NotFound_ThrowsException(RoleServiceTest.java:99)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.RoleServiceTest.getRoleById_NotFound_ThrowsException -- Time elapsed: 0.003 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Rol bulunamadı: 1
+	at com.yscclinic.service.impl.RoleServiceImpl.lambda$getRoleById$0(RoleServiceImpl.java:34)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.yscclinic.service.impl.RoleServiceImpl.getRoleById(RoleServiceImpl.java:34)
+	...(75 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.RoleServiceTest.getRoleById_NotFound_ThrowsException(RoleServiceTest.java:80)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.yscclinic.service.RoleServiceTest.deleteRole_NotFound_ThrowsException -- Time elapsed: 0.005 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.yscclinic.exception.ResourceNotFoundException
+but was:
+  jakarta.persistence.EntityNotFoundException: Rol bulunamadı: 1
+	at com.yscclinic.service.impl.RoleServiceImpl.deleteRole(RoleServiceImpl.java:63)
+	at com.yscclinic.service.RoleServiceTest.lambda$deleteRole_NotFound_ThrowsException$4(RoleServiceTest.java:163)
+	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)
+	...(73 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.yscclinic.service.RoleServiceTest.deleteRole_NotFound_ThrowsException(RoleServiceTest.java:164)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
